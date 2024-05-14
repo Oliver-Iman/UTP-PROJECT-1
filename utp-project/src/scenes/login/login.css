@@ -1,0 +1,164 @@
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+.particulas { 
+  background-image: url("../../../public/assets/fondo.png"); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 50% 50%; 
+  position:absolute; 
+  width: 100%; 
+  height: 100%;
+} 
+
+.login-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+  .login-section h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-section .user-box {
+  position: relative;
+}
+
+.login-section .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-section .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-section .user-box input:focus ~ label,
+.login-section .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-section form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+/*========= BOTONES =========*/
+.login-section form button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #03e9f4;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/*========= FORGOT PASSWORD =========*/
+.forgot-password {
+  color: #03e9f4;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+/* Estilizar el enlace como si fuera un enlace */
+.forgot-password-text::before {
+  content: "¿Olvidaste tu contraseña?";
+  font-size: 12px;
+  color: #03e9f4; /* Color del enlace */
+  text-decoration: underline; /* Añadir subrayado para que parezca un enlace */
+  cursor: pointer; /* Cambiar el cursor al puntero al pasar sobre él */
+}
+
+/* Quitar el estilo predeterminado de la etiqueta p */
+.forgot-password-text {
+  margin: 0; /* Puedes eliminar el margen si es necesario */
+  font-size: inherit; /* Revertir el tamaño de fuente a su valor heredado */
+  color: inherit; /* Revertir el color a su valor heredado */
+  text-decoration: none; /* Quitar cualquier subrayado existente */
+  cursor: auto; /* Restaurar el cursor predeterminado */
+}
+
+
+
+ /* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .login-section {
+      width: 90%;
+      padding: 20px;
+    }
+    .login-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .user-box input {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .user-box label {
+      font-size: 14px;
+    }
+    form button {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  }
